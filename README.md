@@ -30,13 +30,13 @@ earthquake. When a magnitude changes, the cell lights up.
 Six tags in `index.html`, and that is the whole of the library setup:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.62.0/lattice-grid.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.63.0/lattice-grid.min.css">
 
-<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.62.0/lattice-grid.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.62.0/modules/charts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.62.0/modules/data-router.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.62.0/modules/kpi.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.62.0/modules/tabs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.63.0/lattice-grid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.63.0/modules/charts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.63.0/modules/data-router.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.63.0/modules/kpi.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@1.63.0/modules/tabs.min.js"></script>
 ```
 
 Each file is the package's UMD build (`*.min.js`, beside the `*.esm.min.js`
@@ -56,7 +56,7 @@ self-contained and can go in any order. `main.js` checks that every factory it
 needs is actually there before it draws anything, so a tag that did not load
 is reported as a sentence rather than as an error from inside the grid.
 
-Every address names the exact release, `1.62.0`, and every tag carries the
+Every address names the exact release, `1.63.0`, and every tag carries the
 `integrity` hash of the file it expects. The page cannot quietly pick up a
 different build than the one it was checked against, and the browser refuses
 a file that does not match. The hashes are the SHA-384 of the published files.
@@ -97,8 +97,6 @@ Choose the ESM package instead when:
   tree-shakes, the four modules that extend the core share the one copy the
   page already imported, and you get TypeScript declarations wired through
   `package.json` with no configuration.
-- **You need the eighteen extra chart types.** They ship as ESM only, each
-  self-registering onto the charts module. There is no UMD build for them.
 - **You want everything offline, including the library.** The ESM edition of
   this demo installs the grid into `node_modules` and serves it from there,
   so it runs with no network at all. This edition needs to reach jsDelivr for

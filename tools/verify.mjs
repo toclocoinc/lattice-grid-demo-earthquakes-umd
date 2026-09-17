@@ -55,7 +55,7 @@ const NOTABLE_MAG = 4.5;
 const SLACK_MS = WINDOW_MS * 0.1 + 1000;
 
 /** The release every library tag must name, and the globals each file leaves. */
-const GRID_VERSION = '1.62.0';
+const GRID_VERSION = '1.63.0';
 const CDN_BASE = `https://cdn.jsdelivr.net/npm/@toclocoinc/lattice-grid@${GRID_VERSION}/`;
 const LIBRARY_TAGS = [
   { file: 'lattice-grid.min.js', global: 'LatticeGrid', member: 'createGrid' },
